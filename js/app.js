@@ -1,6 +1,6 @@
 var authToken;
 
-$(document).ready(function(){
+$(function(){
 
 	var returnedURL = window.location.href; 
 	console.log("returned url: " + returnedURL);
@@ -37,10 +37,6 @@ $(document).ready(function(){
 function getAuthCodeFromURL( myurl )
 {
 	  return myurl.split("=")[1];
-    //var begin = myurl.indexOf('=') + 1;
-    //var end = myurl.length;
-    //var accessToken = myurl.substring(begin, end);
-    //return accessToken;
 }
 
 
