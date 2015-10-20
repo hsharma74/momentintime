@@ -4,25 +4,101 @@
 	<meta charset="UTF-8">
 	<title>Moment In Time</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script type="text/javascript" src="apps/app.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <script src="js/jquery.datetimepicker.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/app.js"></script>
+ 
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="sytlesheet" href="css/style.css">
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
+	
+	<script>
+
+	
+	
+	</script>
+
 </head>
 <body>
-	<section id="search-bar">
-		<div class="container">
-			<form id="search-term">
-				<label for="text1">Search:  <input type="text" name="text1" id="query" size="30"/></label>
-				<button class="submit-button">Submit</button>
-			</form>
-		</div>
-	</section>
 
-	<br></br>
-	<section id="results">
-		<div id="search-results">
+  <section id="front_page">
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="twelve columns">
+            <h1 id="moment-title"><span>Moment In Time</span></h1>
+            <p id="moment-desc">Search a Moment in Instagram Time</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		</div>
-	</section>
+    <div class="container">
+      <div class="input-form">
+      <div class="row">
+        <form id="datetime_range">
+          <!-- Date and time range for which to capture the instagram moment -->
+          <div id="date-from-to">
+            <div class="row">
+              <div class="three columns">
+                <label for="from">From date</label>
+                <input class="u-full-width" id="datetimepicker1" type="text" value="2015-10-16 00:00" name="from"/>
+              </div>
+              <div class="three columns">
+                <label for="to">To date</label>
+                <input class="u-full-width" id="datetimepicker2" type="text" value="2015-10-16 12:00" name="to"/>
+              </div>
+            </div>
+          </div>
+
+          <!-- Latitude and Longitude input -->
+          <div id="latlong">
+            <div class="row">
+             <div class="three columns">
+                <label for="latitude">Latitude</label>
+                <input class="u-full-width" id="latitude" type="text" value="40.759131" name="latitude"/>
+              </div>
+              <div class="three columns">
+                <label for="longitude">Longitude</label>
+                <input class="u-full-width" id="longitude" type="text" value="-73.985088" name="longitude"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="three columns">
+              <input class="button-primary" type="submit" value="Submit" style="position:relative; top: 28px" id="submit_button"/>
+            </div>
+          </div>
+        </form>
+      </div> 
+      </div>      
+    </div>         <!-- class="container" -->
+  </section>
+		
+  <section id="search-results">
+
+
+
+
+  </section>
+
+
+
 	
 </body>
 </html>
