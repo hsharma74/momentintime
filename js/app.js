@@ -3,6 +3,7 @@ var authToken;
 $(document).ready(function(){
 
 	var returnedURL = window.location.href; 
+	console.log("returned url: " + returnedURL);
 	authToken = getAuthCodeFromURL(returnedURL); 
 	
 	console.log("Instagram Access Token is: " + authToken); 
@@ -54,7 +55,7 @@ function getMomentJSON(token, fromTime, toTime, latitude, longitude) {
 	
 	//AJAX call to Instagram API endpoint
 	var result = $.ajax({
-		url: "https://api.instagram.com/v1/users/self/media/recent",
+		url: "https://api.instagram.com/v1/media/search",
 		data: request,
 		dataType: "jsonp",
 		type: "GET",
