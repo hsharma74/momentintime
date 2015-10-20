@@ -36,10 +36,11 @@ $(document).ready(function(){
 //Function that takes the URL parameter, strips out and returns the authorization token
 function getAuthCodeFromURL( myurl )
 {
-    var begin = myurl.indexOf('=') + 1;
-    var end = myurl.length;
-    var accessToken = myurl.substring(begin, end);
-    return accessToken;
+	  return myurl.split("=")[1];
+    //var begin = myurl.indexOf('=') + 1;
+    //var end = myurl.length;
+    //var accessToken = myurl.substring(begin, end);
+    //return accessToken;
 }
 
 
