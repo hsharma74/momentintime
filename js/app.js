@@ -58,13 +58,13 @@ function getMomentJSON(token, fromTime, toTime, latitude, longitude) {
 		type: "GET",
 		})   //; //Once this call is finished, execute the following
 		.done(function(result) {
-			$('#search-results').empty(); // clear out for the displaying the new results
+			$('.image_results').empty(); // clear out for the displaying the new results
 			$.each(result.data, function(i, item){
 				//console.log(item); //Debug: output JSON object to console
 				console.log("link:" + item.images.low_resolution.url);
 				//console.log("text:" + item.caption.text);
 				var imgLink = "<img id=\"thumbnail-img\" src=\"" + item.images.low_resolution.url + "\">";
-				$('#search-results').append("<p>" + imgLink + "</a></p>");
+				$('#search-results').append("<p class="image_results">" + imgLink + "</a></p>");
 			});
 		});
    
