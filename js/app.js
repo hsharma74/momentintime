@@ -61,7 +61,7 @@ function getMomentJSON(token, fromTime, toTime, latitude, longitude) {
 			$.each(result.data, function(i, item){
 				//console.log(item); //Debug: output JSON object to console
 				console.log("link:" + item.images.low_resolution.url);
-				console.log("text:" + item.caption.text);
+				//console.log("text:" + item.caption.text);
 				var imgLink = "<img id=\"thumbnail-img\" src=\"" + item.images.low_resolution.url + "\">";
 				$('#search-results').append("<p>" + imgLink + "</a></p>");
 			});
