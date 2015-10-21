@@ -59,13 +59,13 @@ function getMomentJSON(token, fromTime, toTime, latitude, longitude) {
 		})   //; //Once this call is finished, execute the following
 		.done(function(result) {
 			$.each(result.data, function(i, item){
-				console.log(item); //Debug: output JSON object to console
-				console.log("link:" + item.link);
+				//console.log(item); //Debug: output JSON object to console
+				console.log("link:" + item.images.low_resolution.url);
 				console.log("text:" + item.caption.text);
 			});
 		});
    
-  console.log(result.data.length);
+  //console.log(result.data.length);
 }
 
 
