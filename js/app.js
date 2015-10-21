@@ -60,6 +60,8 @@ function getMomentJSON(token, fromTime, toTime, latitude, longitude) {
 		.done(function(result) {
 			$.each(result.data, function(i, item){
 				console.log(item); //Debug: output JSON object to console
+				console.log("link:" + item.link);
+				console.log("text:" + item.caption.text);
 			});
 		});
    
