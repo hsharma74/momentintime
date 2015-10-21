@@ -48,7 +48,7 @@ function getMomentJSON(token, fromTime, toTime, latitude, longitude) {
 		max_timestamp: toTime,
 		lat:           latitude,
 		lng:           longitude,
-		count:         20};
+		count:         10};
 	
 	//AJAX call to Instagram API endpoint
 	var result = $.ajax({
@@ -56,10 +56,14 @@ function getMomentJSON(token, fromTime, toTime, latitude, longitude) {
 		data: request,
 		dataType: "jsonp",
 		type: "GET",
-		}); //Once this call is finished, execute the following
-
+		})   //; //Once this call is finished, execute the following
+		.done(function(result) {
+			$.each(result.data, function(i, item){
+				console.log(item); //Debug: output JSON object to console
+			});
+		});
    
-  console.log(result);
+  console.log(result.data.length);
 }
 
 
