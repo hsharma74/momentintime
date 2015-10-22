@@ -60,14 +60,19 @@ function getMomentJSON(token, fromTime, toTime, latitude, longitude) {
 		.done(function(result) {
 			$('.image_results').empty(); // clear out for the displaying the new results
 			$.each(result.data, function(i, item){
+				var myStr = "";
 				//console.log(item); //Debug: output JSON object to console
 				console.log("link:" + item.images.low_resolution.url);
 				console.log("latitude: " + item.location.latitude);
 				console.log("longitude:" + item.location.longitude);
 				console.log("Name:     " + item.location.name);
 				//console.log("text:" + item.caption.text);
+				var myStr = "Latitude:  " + item.location.latitude + "\n";
+				var myStr += "Longitude: " + item.location.longitude + "\n";
+				var myStr += "Name:      " + item.location.name + "\n";
 				var imgLink = "<img id=\"thumbnail-img\" src=\"" + item.images.low_resolution.url + "\">";
 				$('#search-results').append("<p class=\"image_results\">" + imgLink + "</p>");
+				$('#search-results').append("<p class=\"image_desc\">" + myStr + "</p>");
 			});
 		});
    
