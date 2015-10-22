@@ -63,19 +63,17 @@ function getMomentJSON(token, fromTime, toTime, latitude, longitude) {
 				//console.log(item); //Debug: output JSON object to console
 				console.log("link:" + item.images.low_resolution.url);
 				//console.log("text:" + item.caption.text);
+				
 				//myStr += "Latitude:  " + item.location.latitude + "\n";
 				//myStr += "Longitude: " + item.location.longitude + "\n";
 				//myStr += "Name:      " + item.location.name + "\n";
 				//console.log("myStr: " + myStr);
 				var imgLink = "<img id=\"thumbnail-img\" src=\"" + item.images.low_resolution.url + "\">";
-<<<<<<< HEAD
 				$('#search-results').append("<p class=\"image_results\">" + imgLink + "</p>");
 				//$('#search-results').append("<p>" + "Latitude:  " + item.location.latitude + "</p>");
 				//$('#search-results').append("<p>" + "Longitude: " + item.location.longitude + "</p>");
 				//$('#search-results').append("<p>" + "Name:      " + item.location.name + "</p>");
-=======
-				$('#search-results').append("<p class="image_results">" + imgLink + "</a></p>");
->>>>>>> parent of f909604... more debug
+
 			});
 		});
    
