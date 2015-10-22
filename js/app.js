@@ -59,9 +59,7 @@ function getMomentJSON(token, fromTime, toTime, latitude, longitude) {
 		})   //; //Once this call is finished, execute the following
 		.done(function(result) {
 			$('.image_results').empty(); // clear out for the displaying the new results
-			//var myStr = "";
 			$.each(result.data, function(i, item){
-				//myStr = "";
 				//console.log(item); //Debug: output JSON object to console
 				console.log("link:" + item.images.low_resolution.url);
 				console.log("latitude: " + item.location.latitude);
@@ -74,13 +72,13 @@ function getMomentJSON(token, fromTime, toTime, latitude, longitude) {
 				//console.log("myStr: " + myStr);
 				var imgLink = "<img id=\"thumbnail-img\" src=\"" + item.images.low_resolution.url + "\">";
 				$('#search-results').append("<p class=\"image_results\">" + imgLink + "</p>");
-				$('#search-results').append("<p>" + "Latitude:  " + item.location.latitude + "</p>");
-				$('#search-results').append("<p>" + "Longitude: " + item.location.longitude + "</p>");
-				$('#search-results').append("<p>" + "Name:      " + item.location.name + "</p>");
+				//$('#search-results').append("<p>" + "Latitude:  " + item.location.latitude + "</p>");
+				//$('#search-results').append("<p>" + "Longitude: " + item.location.longitude + "</p>");
+				//$('#search-results').append("<p>" + "Name:      " + item.location.name + "</p>");
 			});
 		});
    
-  //console.log(result.data.length);
+ 
 }
 
 
