@@ -71,9 +71,15 @@
 	margin-bottom: 10px;
 }
 
+#search-results {
+	margin-top: 50px;
+	display: inline-block;
+}
+
 .images_results {
 	margin-top: 10px;
 	margin-bottom: 10px;
+	display: inline-block;
 }
 
 .images_desc {
