@@ -67,9 +67,9 @@ function getMomentJSON(token, fromTime, toTime, latitude, longitude) {
 				console.log("longitude:" + item.location.longitude);
 				console.log("Name:     " + item.location.name);
 				//console.log("text:" + item.caption.text);
-				var myStr = "Latitude:  " + item.location.latitude + "\n";
-				var myStr += "Longitude: " + item.location.longitude + "\n";
-				var myStr += "Name:      " + item.location.name + "\n";
+				myStr += "Latitude:  " + item.location.latitude + "\n";
+				myStr += "Longitude: " + item.location.longitude + "\n";
+				myStr += "Name:      " + item.location.name + "\n";
 				var imgLink = "<img id=\"thumbnail-img\" src=\"" + item.images.low_resolution.url + "\">";
 				$('#search-results').append("<p class=\"image_results\">" + imgLink + "</p>");
 				$('#search-results').append("<p class=\"image_desc\">" + myStr + "</p>");
