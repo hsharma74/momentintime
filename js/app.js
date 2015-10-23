@@ -60,6 +60,7 @@ function getMomentJSON(token, fromTime, toTime, latitude, longitude) {
 		.done(function(result) {
 			$('.image_results').empty(); // clear out for the displaying the new results
 			$('.image_desc').empty();
+			$('.search-results').empty();
 			var counter = 1;
 			$.each(result.data, function(i, item){
 				//console.log(item); //Debug: output JSON object to console
