@@ -86,7 +86,7 @@ function getMomentJSON(token, fromTime, toTime, latitude, longitude) {
 				//if (counter % 3 == 0) {
 				//	$('#search-results').append("</div>");
 				//}				
-				//counter += 1;
+				///counter += 1;
 			});
 		});
    
