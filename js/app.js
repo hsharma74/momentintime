@@ -72,21 +72,13 @@ function getMomentJSON(token, fromTime, toTime, latitude, longitude) {
 				//myStr += "Name:      " + item.location.name + "\n";
 				//console.log("myStr: " + myStr);
 
-				//if (counter % 3 == 1) {
-				//	$('#search-results').append("<div class=\"row\">");
-				//}
-				//$('#search-results').append("<div class=\"col-md-4\">");
+				
 				var imgLink = "<img id=\"thumbnail-img\" src=\"" + item.images.low_resolution.url + "\">";
 				$('#search-results').append("<p class=\"image_results\">" + imgLink + "</p>");
 				$('#search-results').append("<p class=\"image_desc\">" + "Latitude:  " + item.location.latitude + "</p>");
 				$('#search-results').append("<p class=\"image_desc\">" + "Longitude: " + item.location.longitude + "</p>");
 				$('#search-results').append("<p class=\"image_desc\">" + "Name:      " + item.location.name + "</p>");
-				//$('#search-results').append("</div>");
-
-				//if (counter % 3 == 0) {
-				//	$('#search-results').append("</div>");
-				//}				
-				///counter += 1;
+				
 			});
 		});
    
