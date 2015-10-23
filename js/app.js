@@ -82,7 +82,7 @@ function getMomentJSON(token, fromTime, toTime, latitude, longitude) {
 				$('#search-results').append("<p class=\"image_desc\">" + "Name:      " + item.location.name + "</p>");
 				$('#search-results').append("</div>");
 
-				if (counter % 3 == 1) {
+				if (counter % 3 == 0) {
 					$('#search-results').append("</div>");
 				}				
 				counter += 1;
