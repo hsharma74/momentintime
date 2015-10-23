@@ -48,7 +48,7 @@ function getMomentJSON(token, fromTime, toTime, latitude, longitude) {
 		max_timestamp: toTime,
 		lat:           latitude,
 		lng:           longitude,
-		count:         10};
+		count:         20};
 	
 	//AJAX call to Instagram API endpoint
 	var result = $.ajax({
@@ -60,6 +60,7 @@ function getMomentJSON(token, fromTime, toTime, latitude, longitude) {
 		.done(function(result) {
 			$('.image_results').empty(); // clear out for the displaying the new results
 			$('.image_desc').empty();
+			var counter = 1;
 			$.each(result.data, function(i, item){
 				//console.log(item); //Debug: output JSON object to console
 				console.log("link:" + item.images.low_resolution.url);
@@ -69,12 +70,22 @@ function getMomentJSON(token, fromTime, toTime, latitude, longitude) {
 				//myStr += "Longitude: " + item.location.longitude + "\n";
 				//myStr += "Name:      " + item.location.name + "\n";
 				//console.log("myStr: " + myStr);
+
+				if (counter % 3 == 1) {
+					$('#search-results').append("<div class=\"row\">");
+				}
+				$('#search-results').append("<div class=\"col-md-4\">");
 				var imgLink = "<img id=\"thumbnail-img\" src=\"" + item.images.low_resolution.url + "\">";
 				$('#search-results').append("<p class=\"image_results\">" + imgLink + "</p>");
 				$('#search-results').append("<p class=\"image_desc\">" + "Latitude:  " + item.location.latitude + "</p>");
 				$('#search-results').append("<p class=\"image_desc\">" + "Longitude: " + item.location.longitude + "</p>");
 				$('#search-results').append("<p class=\"image_desc\">" + "Name:      " + item.location.name + "</p>");
+				$('#search-results').append("</div>");
 
+				if (counter % 3 == 1) {
+					$('#search-results').append("</div>");
+				}				
+				counter += 1;
 			});
 		});
    
